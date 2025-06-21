@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mareo Manoj - Frontend Developer</title>
+    <title>Mareo Manoj - Frontend Developer & UI/UX Designer</title>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -25,7 +25,7 @@
 
         body {
             font-family: 'Satoshi', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1f2937 50%, #1e3a8a 100%);
+            background: linear-gradient(135deg, #000000 0%, #1f2937 50%, #111827 100%);
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
@@ -63,10 +63,10 @@
 
         @keyframes glow {
             0%, 100% { 
-                box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); 
+                box-shadow: 0 0 20px rgba(239, 68, 68, 0.3); 
             }
             50% { 
-                box-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 40px rgba(59, 130, 246, 0.4); 
+                box-shadow: 0 0 30px rgba(239, 68, 68, 0.6), 0 0 40px rgba(239, 68, 68, 0.4); 
             }
         }
 
@@ -115,8 +115,9 @@
         }
 
         @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
+            50% { background-position: 0% 0; }
         }
 
         @keyframes rotate {
@@ -176,7 +177,7 @@
 
         .navbar.scrolled {
             background: rgba(0, 0, 0, 0.95);
-            border-bottom-color: rgba(59, 130, 246, 0.3);
+            border-bottom-color: rgba(239, 68, 68, 0.3);
         }
 
         .nav-content {
@@ -190,9 +191,7 @@
             font-size: 1.25rem;
             font-weight: 700;
             color: #ffffff;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-            animation: float 3s ease-in-out infinite;
-            will-change: transform;
+            text-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
             font-family: 'Satoshi', sans-serif;
             letter-spacing: -0.02em;
         }
@@ -221,13 +220,13 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #60a5fa, #3b82f6);
+            background: linear-gradient(90deg, #f87171, #ef4444);
             transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             will-change: width;
         }
 
         .nav-links a:hover {
-            color: #60a5fa;
+            color: #f87171;
             transform: translate3d(0, -2px, 0);
         }
 
@@ -242,20 +241,20 @@
             }
             
             .nav-links a:active {
-                color: #60a5fa;
+                color: #f87171;
                 transform: translate3d(0, -2px, 0);
             }
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #2563eb, #1e40af);
+            background: linear-gradient(135deg, #dc2626, #991b1b);
             color: white;
             padding: 0.5rem 1rem;
             border: none;
             border-radius: 0.5rem;
             text-decoration: none;
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
@@ -282,7 +281,7 @@
 
         .cta-button:hover {
             transform: translate3d(0, -2px, 0);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.6);
         }
 
         /* Mobile-friendly touch states */
@@ -293,7 +292,7 @@
             
             .cta-button:active {
                 transform: translate3d(0, -2px, 0);
-                box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
+                box-shadow: 0 8px 25px rgba(220, 38, 38, 0.6);
             }
         }
 
@@ -315,7 +314,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(30, 64, 175, 0.05));
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), rgba(220, 38, 38, 0.05));
             opacity: 0.3;
         }
 
@@ -330,19 +329,18 @@
         .profile-avatar {
             display: inline-block;
             margin-bottom: 2rem;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1), 0 0 60px rgba(59, 130, 246, 0.2);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1), 0 0 60px rgba(239, 68, 68, 0.2);
             border-radius: 12px;
             padding: 8px;
             background: linear-gradient(145deg, rgba(17, 24, 39, 0.8), rgba(0, 0, 0, 0.9));
             border: 2px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            animation: float 4s ease-in-out infinite;
             will-change: transform, box-shadow;
         }
 
         .profile-avatar:hover {
             transform: scale3d(1.05, 1.05, 1);
-            box-shadow: 0 0 40px rgba(255, 255, 255, 0.2), 0 0 80px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.2), 0 0 80px rgba(239, 68, 68, 0.3);
         }
 
         /* Touch-friendly avatar interaction */
@@ -353,7 +351,7 @@
             
             .profile-avatar:active {
                 transform: scale3d(1.05, 1.05, 1);
-                box-shadow: 0 0 40px rgba(255, 255, 255, 0.2), 0 0 80px rgba(59, 130, 246, 0.3);
+                box-shadow: 0 0 40px rgba(255, 255, 255, 0.2), 0 0 80px rgba(239, 68, 68, 0.3);
             }
         }
 
@@ -370,7 +368,7 @@
             font-size: 3rem;
             font-weight: 800;
             margin-bottom: 1.5rem;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 20px rgba(239, 68, 68, 0.1);
             animation: slideInLeft 1s ease-out 0.2s both;
             will-change: transform, opacity;
             font-family: 'Satoshi', sans-serif;
@@ -379,14 +377,14 @@
         }
 
         .hero .name-highlight {
-            background: linear-gradient(135deg, #60a5fa, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #f87171, #ef4444, #b91c1c);
             background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: shimmer 3s ease-in-out infinite;
-            text-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
-            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
+            text-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
+            filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.3));
             will-change: background-position;
             font-weight: 900;
         }
@@ -486,36 +484,36 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #2563eb, #1e40af, #1e3a8a);
+            background: linear-gradient(135deg, #dc2626, #991b1b, #7f1d1d);
             background-size: 200% 200%;
             color: white;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
             animation: shimmer 4s ease-in-out infinite;
             will-change: background-position, transform, box-shadow;
         }
 
         .btn-primary:hover {
             transform: translate3d(0, -3px, 0);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.6);
             background-position: right center;
         }
 
         .btn-outline {
-            border: 2px solid rgba(96, 165, 250, 0.5);
-            color: #60a5fa;
-            background: rgba(59, 130, 246, 0.05);
+            border: 2px solid rgba(248, 113, 113, 0.5);
+            color: #f87171;
+            background: rgba(239, 68, 68, 0.05);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.1);
             will-change: transform, box-shadow, background-color, border-color;
         }
 
         .btn-outline:hover {
             color: white;
-            border-color: #60a5fa;
-            background: rgba(59, 130, 246, 0.2);
+            border-color: #f87171;
+            background: rgba(239, 68, 68, 0.2);
             transform: translate3d(0, -3px, 0);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
         }
 
         .btn-secondary {
@@ -545,14 +543,14 @@
             }
             
             .btn-primary:active {
-                box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
+                box-shadow: 0 8px 25px rgba(220, 38, 38, 0.6);
             }
             
             .btn-outline:active {
                 color: white;
-                border-color: #60a5fa;
-                background: rgba(59, 130, 246, 0.2);
-                box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+                border-color: #f87171;
+                background: rgba(239, 68, 68, 0.2);
+                box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
             }
             
             .btn-secondary:active {
@@ -572,7 +570,7 @@
             font-weight: 800;
             text-align: center;
             margin-bottom: 3rem;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 20px rgba(239, 68, 68, 0.1);
             position: relative;
             will-change: transform, opacity;
             font-family: 'Satoshi', sans-serif;
@@ -588,7 +586,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
-            background: linear-gradient(90deg, #60a5fa, #3b82f6);
+            background: linear-gradient(90deg, #f87171, #ef4444);
             border-radius: 2px;
         }
 
@@ -734,19 +732,19 @@
         }
 
         .feature-icon {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1));
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
             border-radius: 0.75rem;
             padding: 0.75rem;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            color: #60a5fa;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: #f87171;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             will-change: transform, box-shadow;
         }
 
         .feature-card:hover .feature-icon {
             transform: scale3d(1.1, 1.1, 1) rotate(5deg);
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
         }
 
         /* Enhanced Projects */
@@ -767,7 +765,7 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, #60a5fa, #3b82f6, #1d4ed8);
+            background: linear-gradient(90deg, #f87171, #ef4444, #b91c1c);
             transform: scaleX(0);
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             will-change: transform;
@@ -779,7 +777,7 @@
 
         .project-card:hover {
             transform: translate3d(0, -10px, 0) scale3d(1.02, 1.02, 1);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(239, 68, 68, 0.3);
         }
 
         /* Mobile touch states for project cards */
@@ -796,7 +794,7 @@
 
         .project-image {
             aspect-ratio: 16/9;
-            background: linear-gradient(135deg, #2563eb, #1e40af);
+            background: linear-gradient(135deg, #dc2626, #991b1b);
             position: relative;
             overflow: hidden;
         }
@@ -860,11 +858,11 @@
         }
 
         .tag {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1));
-            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
             border-radius: 0.375rem;
-            color: #93c5fd;
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.2);
             padding: 0.25rem 0.5rem;
             font-size: 0.875rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -875,8 +873,9 @@
 
         .tag:hover {
             transform: translate3d(0, -2px, 0);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.2));
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.2));
+            color: #f87171;
         }
 
         /* Mobile touch states for tags */
@@ -932,7 +931,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: conic-gradient(from 0deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            background: conic-gradient(from 0deg, transparent, rgba(239, 68, 68, 0.1), transparent);
             animation: rotate 4s linear infinite;
             opacity: 0;
             transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -979,11 +978,11 @@
         }
 
         .skill-tag {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1));
-            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
             border-radius: 0.375rem;
-            color: #93c5fd;
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.2);
             padding: 0.25rem 0.5rem;
             font-size: 0.875rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -994,10 +993,10 @@
         }
 
         .skill-tag:hover {
-            color: #60a5fa;
-            border-color: rgba(59, 130, 246, 0.4);
+            color: #f87171;
+            border-color: rgba(239, 68, 68, 0.4);
             transform: translate3d(0, -2px, 0) scale3d(1.05, 1.05, 1);
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
         }
 
         /* Mobile touch states for skill tags */
@@ -1007,10 +1006,10 @@
             }
             
             .skill-tag:active {
-                color: #60a5fa;
-                border-color: rgba(59, 130, 246, 0.4);
+                color: #f87171;
+                border-color: rgba(239, 68, 68, 0.4);
                 transform: translate3d(0, -1px, 0) scale3d(1.02, 1.02, 1);
-                box-shadow: 0 3px 12px rgba(59, 130, 246, 0.25);
+                box-shadow: 0 3px 12px rgba(239, 68, 68, 0.25);
             }
         }
 
@@ -1051,7 +1050,7 @@
             left: 0;
             right: 0;
             height: 2px;
-            background: linear-gradient(90deg, #fbbf24, #f59e0b, #d97706);
+            background: linear-gradient(90deg, #f87171, #ef4444, #b91c1c);
             transform: scaleX(0);
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             will-change: transform;
@@ -1096,7 +1095,7 @@
         }
 
         .quote-icon {
-            color: #60a5fa;
+            color: #f87171;
             margin-bottom: 1rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             will-change: transform, color;
@@ -1104,7 +1103,7 @@
 
         .testimonial-card:hover .quote-icon {
             transform: scale3d(1.1, 1.1, 1) rotate(-5deg);
-            color: #93c5fd;
+            color: #fca5a5;
         }
 
         .testimonial-text {
@@ -1195,19 +1194,19 @@
         }
 
         .contact-icon {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1));
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
             border-radius: 0.5rem;
             padding: 0.5rem;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            color: #60a5fa;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: #f87171;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             will-change: transform, box-shadow;
         }
 
         .contact-item:hover .contact-icon {
             transform: scale3d(1.1, 1.1, 1) rotate(5deg);
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
         }
 
         .social-buttons {
@@ -1217,9 +1216,9 @@
         }
 
         .social-btn {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1));
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
             color: #9ca3af;
             padding: 0.75rem;
             border-radius: 0.5rem;
@@ -1253,10 +1252,10 @@
         }
 
         .social-btn:hover {
-            color: #60a5fa;
-            border-color: rgba(59, 130, 246, 0.4);
+            color: #f87171;
+            border-color: rgba(239, 68, 68, 0.4);
             transform: translate3d(0, -3px, 0) scale3d(1.05, 1.05, 1);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
         }
 
         /* Mobile touch states for social buttons */
@@ -1266,24 +1265,24 @@
             }
             
             .social-btn:active {
-                color: #60a5fa;
-                border-color: rgba(59, 130, 246, 0.4);
+                color: #f87171;
+                border-color: rgba(239, 68, 68, 0.4);
                 transform: translate3d(0, -2px, 0) scale3d(1.02, 1.02, 1);
-                box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
+                box-shadow: 0 6px 20px rgba(239, 68, 68, 0.25);
             }
         }
 
         .paypal-btn {
-            background: linear-gradient(135deg, #eab308, #d97706);
+            background: linear-gradient(135deg, #e79924, #d9bd06);
             color: white;
             width: 100%;
             margin-bottom: 0.75rem;
         }
 
         .paypal-btn:hover {
-            background: linear-gradient(135deg, #ca8a04, #c2410c);
+            background: linear-gradient(135deg, #3f1bdd, #040ed1);
             transform: translate3d(0, -3px, 0);
-            box-shadow: 0 8px 25px rgba(234, 179, 8, 0.4);
+            box-shadow: 0 8px 25px rgba(192, 5, 5, 0.4);
         }
 
         /* Enhanced Form */
@@ -1316,8 +1315,8 @@
 
         .form-input:focus {
             outline: none;
-            border-color: rgba(59, 130, 246, 0.5);
-            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(59, 130, 246, 0.1);
+            border-color: rgba(239, 68, 68, 0.5);
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(239, 68, 68, 0.1);
             transform: translate3d(0, -2px, 0);
         }
 
@@ -1440,7 +1439,7 @@
             left: 0;
             width: 0%;
             height: 3px;
-            background: linear-gradient(90deg, #60a5fa, #3b82f6, #1d4ed8);
+            background: linear-gradient(90deg, #f87171, #ef4444, #b91c1c);
             z-index: 9999;
             transition: width 0.1s ease;
             will-change: width;
@@ -1453,7 +1452,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #000000 0%, #1f2937 50%, #1e3a8a 100%);
+            background: linear-gradient(135deg, #000000 0%, #1f2937 50%, #111827 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1470,8 +1469,8 @@
         .loader {
             width: 50px;
             height: 50px;
-            border: 3px solid rgba(59, 130, 246, 0.3);
-            border-top: 3px solid #60a5fa;
+            border: 3px solid rgba(239, 68, 68, 0.3);
+            border-top: 3px solid #ef4444;
             border-radius: 50%;
             animation: spin 1s linear infinite;
             will-change: transform;
@@ -1492,7 +1491,7 @@
             position: absolute;
             width: 2px;
             height: 2px;
-            background: rgba(59, 130, 246, 0.3);
+            background: rgba(239, 68, 68, 0.3);
             border-radius: 50%;
             animation: float-particle 6s ease-in-out infinite;
             will-change: transform, opacity;
@@ -1562,6 +1561,44 @@
         .hidden {
             display: none;
         }
+
+        /* Form Styles */
+        .form-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid rgba(156, 163, 175, 0.2);
+            border-radius: 0.5rem;
+            background: rgba(31, 41, 55, 0.5);
+            color: #fff;
+            margin-bottom: 1rem;
+            font-family: 'Satoshi', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: rgba(239, 68, 68, 0.5);
+            box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+        }
+
+        /* Mobile Responsive Form */
+        @media (max-width: 640px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .form-input {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1609,10 +1646,10 @@
                     <img src="public/profile-images/mareo-manoj.png" alt="Mareo Manoj - Icarus">
                 </div>
                 <h1>Hi, I'm <span class="name-highlight">Mareo Manoj</span></h1>
-                <p class="subtitle">Frontend Developer crafting exceptional digital experiences</p>
+                <p class="subtitle">Frontend Developer & UI/UX Designer crafting exceptional digital experiences</p>
                 <p class="description">
-                    I transform ideas into stunning, user-friendly websites and applications. With expertise in modern
-                    frontend technologies, I help businesses establish a powerful online presence that drives results.
+                    I transform ideas into stunning, user-centric digital experiences. With a passion for intuitive design and expertise in modern
+                    frontend technologies, I create beautiful, accessible interfaces that delight users and drive business growth.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
@@ -1639,22 +1676,26 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
                 <div class="card">
-                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Passionate Frontend Developer</h3>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Passionate Frontend Developer & UI/UX Designer</h3>
                     <p style="color: #d1d5db; margin-bottom: 1.5rem; line-height: 1.7;">
-                        I specialize in creating responsive, accessible, and performant web applications that not only look
-                        great but also provide exceptional user experiences. My focus is on writing clean, maintainable code
-                        that scales with your business needs.
+                        I specialize in creating intuitive, accessible, and delightful digital experiences. With a keen eye for design
+                        and strong technical skills, I craft user interfaces that not only look stunning but also provide seamless
+                        interactions. My focus is on user-centered design principles and clean, maintainable code that scales.
                     </p>
                     <p style="color: #d1d5db; margin-bottom: 1.5rem; line-height: 1.7;">
                         Whether you're a startup looking to establish your digital presence or an established business wanting
-                        to modernize your web platform, I bring the technical expertise and creative vision to make your
-                        project a success.
+                        to enhance your user experience, I bring both design thinking and technical expertise to make your
+                        project stand out in today's digital landscape.
                     </p>
                     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="tag">UI/UX Design</span>
+                        <span class="tag">Figma</span>
                         <span class="tag">React</span>
                         <span class="tag">Next.js</span>
                         <span class="tag">TypeScript</span>
                         <span class="tag">Tailwind CSS</span>
+                        <span class="tag">User Research</span>
+                        <span class="tag">Prototyping</span>
                     </div>
                 </div>
                 <div>
@@ -1874,7 +1915,7 @@
                             <img src="public/project-images/anand-maheshwar.png" alt="Testimonial Author" class="testimonial-author-image">
                             <div class="testimonial-author-info">
                                 <h4 class="testimonial-author-name">Anand Maheshwar</h4>
-                                <p class="testimonial-author-title">Head of Design, Internship Cell CET</p>
+                                <p class="testimonial-author-title">Design Team, CET Times</p>
                             </div>
                         </div>
                     </div>
@@ -1898,9 +1939,8 @@
                     <div class="contact-info">
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                    <path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
                                 </svg>
                             </div>
                             <span style="color: #d1d5db;">mareomanoj7@gmail.com</span>
@@ -1937,9 +1977,8 @@
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 0.75rem;">
                         <a href="https://paypal.me/mareomanoj?country.x=IN&locale.x=en_GB" target="_blank" class="btn paypal-btn">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-                                <line x1="1" y1="10" x2="23" y2="10"/>
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 384 512">
+                                <path fill="currentColor" d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"/>
                             </svg>
                             Support via PayPal
                         </a>

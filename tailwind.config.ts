@@ -10,6 +10,11 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			'ibm-plex': ['IBM Plex Sans', 'sans-serif'],
+  			'ibm-plex-mono': ['IBM Plex Mono', 'monospace'],
+  			'ibm-plex-serif': ['IBM Plex Serif', 'serif'],
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
