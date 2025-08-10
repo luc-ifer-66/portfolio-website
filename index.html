@@ -25,7 +25,7 @@
 
         body {
             font-family: 'Satoshi', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1f2937 50%, #111827 100%);
+            background: linear-gradient(135deg, #000000 0%, #1f2937 50%, #991b1b 100%);
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
@@ -390,7 +390,7 @@
         }
 
         .hero .subtitle {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             color: #e5e7eb;
             margin-bottom: 2rem;
             font-weight: 600;
@@ -1294,7 +1294,7 @@
 
         .form-row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            width: 100%
             gap: 1rem;
         }
 
@@ -1452,7 +1452,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #000000 0%, #1f2937 50%, #111827 100%);
+            background: linear-gradient(135deg, #000000 0%, #1f2937 50%, #991b1b 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1512,7 +1512,6 @@
                 animation: none;
             }
         }
-
         /* High contrast mode support */
         @media (prefers-contrast: high) {
             .card,
@@ -1562,41 +1561,10 @@
             display: none;
         }
 
-        /* Form Styles */
-        .form-row {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid rgba(156, 163, 175, 0.2);
-            border-radius: 0.5rem;
-            background: rgba(31, 41, 55, 0.5);
-            color: #fff;
-            margin-bottom: 1rem;
-            font-family: 'Satoshi', sans-serif;
-            transition: all 0.3s ease;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: rgba(239, 68, 68, 0.5);
-            box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
-        }
-
-        /* Mobile Responsive Form */
-        @media (max-width: 640px) {
+        @media (max-width: 490px) {
             .form-row {
-                flex-direction: column;
-                gap: 0;
-            }
-            
-            .form-input {
                 width: 100%;
-                margin-bottom: 1rem;
+                gap: 2rem;
             }
         }
     </style>
@@ -1647,10 +1615,6 @@
                 </div>
                 <h1>Hi, I'm <span class="name-highlight">Mareo Manoj</span></h1>
                 <p class="subtitle">Frontend Developer & UI/UX Designer crafting exceptional digital experiences</p>
-                <p class="description">
-                    I transform ideas into stunning, user-centric digital experiences. With a passion for intuitive design and expertise in modern
-                    frontend technologies, I create beautiful, accessible interfaces that delight users and drive business growth.
-                </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
                         View My Work
@@ -1745,11 +1709,11 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="grid grid-2">
-                <div class="project-card">
+                <!--<div class="project-card">
                     <div class="project-image" style="background: linear-gradient(135deg, #2563eb, #1e40af);">
                         <img src="public/project-images/ksu-cet-hostel-finder.jpg" alt="KSU CET Hostel Finder">
                     </div>
-                    <div class="project-content">
+                    <<div class="project-content">
                         <h3 class="project-title">KSU CET Hostel Finder</h3>
                         <p class="project-description">
                             A comprehensive platform helping students find suitable hostel accommodations near College of Engineering, Trivandrum (CET) campus
@@ -1778,7 +1742,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
                 <div class="project-card">
                     <div class="project-image" style="background: linear-gradient(135deg, #1d4ed8, #1e3a8a);">
@@ -1788,7 +1752,7 @@
                         <h3 class="project-title">KSU CET Student Assist Cell Website</h3>
                         <p class="project-description">
                             Official website for the Student Assist Cell providing resources, support services, and
-                            communication channels for KSU CET students.
+                            communication channels for KSU CET students. Complete with Neumorphic elements, small animations.
                         </p>
                         <div class="project-tags">
                             <span class="tag">HTML</span>
@@ -2000,6 +1964,8 @@
                         </p>
                         <div class="form-row">
                             <input type="text" name="firstName" placeholder="First Name" class="form-input" required>
+                        </div>
+                        <div class="form-row">
                             <input type="text" name="lastName" placeholder="Last Name" class="form-input" required>
                         </div>
                         <input type="email" name="email" placeholder="Email" class="form-input" required>
